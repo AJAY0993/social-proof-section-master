@@ -35,6 +35,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
+    background-image: url('images/bg-pattern-top-desktop.svg'), url('images/bg-pattern-bottom-desktop.svg');
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -43,25 +46,6 @@ body {
     margin: 0 auto;
     align-items: center;
     justify-content: center;
-}
-
-picture {
-    position: absolute;
-}
-
-.top {
-    left: 0;
-    top: 0;
-}
-
-.bottom {
-    bottom: 0;
-    right: 0;
-}
-
-.mobile-bottom,
-.mobile-top {
-    display: none;
 }
 
 .flex {
@@ -181,14 +165,9 @@ i+i {
 
 @media (max-width:600px) {
 
-    .mobile-bottom,
-    .mobile-top {
-        display: block !important;
-    }
-
-    .desktop-top,
-    .desktop-bottom {
-        display: none;
+    body {
+        background-image: url('images/bg-pattern-top-mobile.svg'), url('images/bg-pattern-bottom-mobile.svg');
+        background-position: left top, right bottom;
     }
 
     .container {
